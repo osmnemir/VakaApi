@@ -47,6 +47,9 @@ namespace VakaApplication.Controllers
                 Salary = addEmpyoleRequest.Salary,
                 DailyWorkedDays=addEmpyoleRequest.DailyWorkedDays,
                 OvertimeHours= addEmpyoleRequest.OvertimeHours,
+                DailyPrice=addEmpyoleRequest.DailyPrice,
+                OvertimePrice=addEmpyoleRequest.OvertimePrice
+                
             };
             await _dataContext.Employees.AddAsync(empyolee);
             await _dataContext.SaveChangesAsync();

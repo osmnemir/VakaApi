@@ -33,7 +33,7 @@ namespace VakaApplication.Controllers
 
             decimal calculatedSalary = _salaryService.CalculateSalary(employee);
 
-            return Ok(calculatedSalary);
+            return Ok("Toplam Maaş:"+calculatedSalary);
         }
     }
 

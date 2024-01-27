@@ -5,8 +5,10 @@
         public string TC { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int Salary { get; set; }
-        public int DailyWorkedDays { get; set; } 
-        public decimal OvertimeHours { get; set; } 
+        public decimal Salary { get; set; }
+        public int DailyWorkedDays { get; set; } // Günlük çalışılan gün sayısı
+        public decimal DailyPrice { get; set; }
+        public decimal OvertimeHours { get; set; } // Fazla mesai
+        public decimal OvertimePrice { get; set; }
     }
 }

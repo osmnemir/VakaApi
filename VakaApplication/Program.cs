@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using VakaApplication.Concrete;
 using VakaApplication.Data;
 using VakaApplication.Services;
 
@@ -13,9 +14,8 @@ builder.Services.AddSwaggerGen();
 //builder.Services.AddDbContext<DataContext>(options=>options.UseInMemoryDatabase("EmployeesDb"));
 builder.Services.AddDbContext<DataContext>(options=>
 options.UseSqlServer(builder.Configuration.GetConnectionString("EmpyoleesApiConnectionString")));
-//builder.Services.AddTransient<ISalaryService, FixedSalaryService>();
-//builder.Services.AddTransient<ISalaryService, OvertimeService>();
-//builder.Services.AddTransient<ISalaryService, DailyRateService>();
+
+builder.Services.AddTransient<ISalaryService, SalaryService>();
 
 
 
